@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    background: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#recTitle {
+    font-family: 'Pacifico', sans-serif; 
+}
+
+h2 {
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 600px;
+}
+
+div {
+    padding: 5px;
+}
+
+input[type='text'] {
+    min-width: 400px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+#recList img {
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#food {
+    background-color: lightblue;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+    
+#title {
+    padding: 10px;
+    display: inline-block;
+}
+
+#head {
+    margin-top: 1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+#head button{
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    transition: ease-in-out 0.2s;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#head button:hover{
+    transform: scale(1.05);
+}
+
+#head button:active {
+    background-color: rgb(126, 185, 206);
+}
+
+#head #disabledButton{
+    background-color: antiquewhite;
+    pointer-events: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}

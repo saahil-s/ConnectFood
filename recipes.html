@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="./styles/recipes.css" type="text/css">
+  <link rel="stylesheet" href="./styles/profile.css" type="text/css">
+</head>
+
+<body>
+<div id="head">
+  <!-- Navigation buttons with icons -->
+  <button onclick="window.location.href = 'index.html';">
+    <img src="/Images/home.png" width="20px" height="20px"/>
+  </button>
+  <button onclick="window.location.href = 'recommendations.html';">
+    <img src="/Images/thumbs.png" width="20px" height="20px"/>
+  </button>
+  <button id="disabledButton">
+    <img src="/Images/chefs_hat.png" width="20px" height="20px"/>
+  </button>
+  <button onclick="window.location.href = 'friends_list.html';">
+    <img src="/Images/people.png" width="20px" height="20px"/>
+  </button>
+  <button onclick="window.location.href = 'profile.html';">
+    <img src="/Images/user.png" width="20px" height="20px"/>
+  </button>
+</div>
+<div class="container">
+  <div class="sidebar">
+    <img src="Images/recipes_page.png" alt="Chef preparing food">
+  </div>
+  <div class="content">
+    <div class="header">
+      <!-- Header content can go here -->
+    </div>
+    <div class="filter-and-recipes">
+      <!-- Dropdown Menu for Filters -->
+      <div class="dropdown">
+        <button class="filter-btn">Filter</button>
+        <div class="dropdown-content">
+          <!-- Filter options -->
+          <div id="column">
+            <label>Dietary Restriction</label>
+            <!-- Checkbox options for dietary restriction -->
+            <label><input type="checkbox" id="vegetarian">Vegetarian</label>
+            <label><input type="checkbox" id="vegan">Vegan</label>
+            <label><input type="checkbox" id="gluten-free">Gluten-Free</label>
+          </div>
+          <div id="column">
+            <label>Spice Level</label>
+            <!-- Checkbox options for spice level -->
+            <label><input type="checkbox" id="mild">Mild</label>
+            <label><input type="checkbox" id="moderate">Moderate</label>
+            <label><input type="checkbox" id="spicy">Spicy</label>
+          </div>
+          <div id="column">
+            <label>Price Range</label>
+            <!-- Checkbox options for price range -->
+            <label><input type="checkbox" id="cheap">$0-$9.99</label>
+            <label><input type="checkbox" id="affordable">$0-$19.99</label>
+            <label><input type="checkbox" id="expensive">$0-$29.99</label>
+          </div>
+        </div>
+      </div>
+      <!-- Container for Dynamic Recipe Cards -->
+      <div id="dynamic-recipe-container">
+        <!-- Recipe cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Include JavaScript for dynamic functionality -->
+<script src="JS/recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./styles/recommendations.css" type="text/css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <div id="head">
+        <button onclick="window.location.href = 'index.html';">
+          <img src="/Images/home.png" width="20px" height="20px"/>
+        </button>
+        <button id="disabledButton">
+          <img src="/Images/thumbs.png" width="20px" height="20px"/>
+        </button>
+        <button onclick="window.location.href = 'recipes.html';">
+          <img src="/Images/chefs_hat.png" width="20px" height="20px"/>
+        </button>
+        <button onclick="window.location.href = 'friends_list.html';">
+          <img src="/Images/people.png" width="20px" height="20px"/>
+        </button>
+        <button onclick="window.location.href = 'profile.html';">
+          <img src="/Images/user.png" width="20px" height="20px"/>
+        </button>
+      </div>
+        <h1 id="recTitle">Recommendations</h1> 
+        <!-- <button id="recButton">
+          Reset Recommendations
+        </button> -->
+        <section id="recList">
+        </section>
+        <div id="food">
+          <div id="recForm">
+            <h2 style="display:block;">Add a Recommendation</h2>
+            <input id="foodItem" type="text" placeholder="Enter the name of the dish..."/>
+            <input id="restaurant" type="text" placeholder="Enter the name of the restaurant..."/>
+            <input id="review" type="text" placeholder="Enter your review of the dish..."/>
+            <br/>
+            <button id="submitBtn" onclick="submitRec()" style="margin: 10px;">
+              Submit Recommendation
+            </button>
+            <p id='errorMsg' style="display: None;">Please fill in all required fields</p>
+            <script>
+              function submitRec() {
+                console.log("Entered Form")
+
+                var val1 = document.getElementById('foodItem').value;
+                var val2 = document.getElementById('restaurant').value;
+                var val3 = document.getElementById('review').value;
+
+                if(val1.length > 0 && val2.length > 0 && val3.length > 0) {
+                  var recommendation = [];
+
+                  var currList;
+                  var temp = localStorage.getItem('recommendation');
+                  if(temp != null) {
+                    currList = JSON.parse(temp);
+                  }
+                  else {
+                    currList = null;
+                  }
+
+                  recommendation.push(document.getElementById('foodItem').value);
+                  recommendation.push(document.getElementById('restaurant').value);
+                  recommendation.push(document.getElementById('review').value);
+
+                  console.log(recommendation);
+
+                  const foodSection = document.createElement("div");
+                  foodSection.id = "food";
+
+                  const para = document.createElement("h2");
+                  const node = document.createTextNode(`${document.getElementById('foodItem').value}`);
+                  para.appendChild(node);
+                  foodSection.appendChild(para);
+                  //para.style.display = "block";
+
+                  const para2 = document.createElement("p");
+                  const node2 = document.createTextNode(`Restaurant: ${document.getElementById('restaurant').value}`);
+                  para2.appendChild(node2);
+                  foodSection.appendChild(para2);
+
+                  const para3 = document.createElement("p");
+                  const node3 = document.createTextNode(`Your Review: ${document.getElementById('review').value}`);
+                  para3.appendChild(node3);
+                  foodSection.appendChild(para3);
+
+                  var foodList = document.getElementById('recList');
+                  foodList.appendChild(foodSection);
+
+                  var newList;
+                  if(currList != null) {
+                    newList = [currList[0], recommendation];
+                  }
+                  else {
+                    newList = [recommendation];
+                  }
+
+                  console.log(newList);
+                  localStorage.setItem('recommendation', JSON.stringify(newList));
+                }
+                else {
+                  var form = document.getElementById('errorMsg');
+                  form.style.display = "block";
+                }
+              }
+            </script>
+          </div>
+        </div>
+    </main>
+  <script type="module" src="JS/recommendations.js"></script>
+  </body>
+</html>

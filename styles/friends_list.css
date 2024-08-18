@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background: antiquewhite;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#friendList {
+    font-family: 'Pacifico', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#friend1 {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#friend2 {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#friend3 {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#addFriend {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+#friendName {
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin:10px
+}
+
+#title {
+    padding: 10px;
+    display: inline-block;
+}
+
+input[type='text'] {
+    min-width: 200px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#head {
+    margin-top: 1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+#head button{
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    transition: ease-in-out 0.2s;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#head button:hover{
+    transform: scale(1.05);
+}
+
+#head button:active {
+    background-color: rgb(126, 185, 206);
+}
+
+#head #disabledButton{
+    background-color: antiquewhite;
+    pointer-events: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,111 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: antiquewhite;
+    color: #333;
+    line-height: 1.4;
+}
+
+.recipe-detail-container {
+    max-width: 768px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+}
+
+/* Recipe image and title */
+#recipe-image {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto 20px;
+    margin-top: 20px;
+}
+
+#recipe-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: lightskyblue;
+}
+
+.recipe-title-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#recipe-description {
+    font-size: 1.2em;
+    margin-left: 20px;
+    color: #333;
+}
+
+/* Recipe metadata */
+.recipe-metadata {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.recipe-metadata span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Section titles */
+h3 {
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid lightblue;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Ingredients & Equipment list */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    background: #f9f9f9;
+    border-left: 4px solid lightblue;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+/* Instructions ordered list */
+ol {
+    counter-reset: step-counter;
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    text-indent: -10px;
+}
+
+/* Notes */
+.notes {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Nutrition facts */
+.nutrition {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Metadata */
+.author, .prep-time, .cook-time, .total-time {
+    font-weight: bold;
+}

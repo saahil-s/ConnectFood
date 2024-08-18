@@ -1,0 +1,214 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Reset default margin, padding, and height for the body and HTML elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Apply the Montserrat font and set up the overall layout of the page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+/* Style the container that holds the main content */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the sidebar and content sections */
+.sidebar, .content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 40%;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style the sidebar image to fit within its container */
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content section styles */
+.content {
+    width: 60%;
+    background-color: antiquewhite;
+    overflow-y: auto;
+}
+
+/* Header styles (centered text with padding) */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the filter and recipe section */
+.filter-and-recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style the filter button */
+.filter-btn {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 10;
+    font-weight: bold;
+    right: 500px;
+    /* Remove the right property if it was positioning the button away from the desired location */
+}
+
+/* Hover effect for the filter button */
+.filter-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the dropdown menu */
+.filter-btn + .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned absolutely to the nearest relative parent */
+    left: 0; /* Align to the left edge of the filter button */
+    top: 100%; /* Positioned directly below the filter button */
+    background-color: #f9f9f9;
+    min-width: 160px; /* Set a minimum width for the dropdown */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure dropdown is above other content */
+    /* Additional styling for the dropdown menu */
+}
+
+/* Display the dropdown menu when hovering over the filter button */
+.filter-btn:hover + .dropdown-menu {
+    display: block; /* Show the dropdown menu */
+}
+
+/* Header styles (centered text with padding) */
+#head {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+/* Style the navigation buttons in the header */
+#head button {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    transition: ease-in-out 0.2s;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hover effect for the navigation buttons */
+#head button:hover {
+    transform: scale(1.05);
+}
+
+/* Active state style for the navigation buttons */
+#head button:active {
+    background-color: rgb(126, 185, 206);
+}
+
+/* Style for a disabled button in the header */
+#head #disabledButton {
+    background-color: antiquewhite;
+    pointer-events: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated styles for recipe cards */
+.recipe-card {
+    position: relative;
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the recipe card image with responsive sizing and border radius */
+.recipe-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: 0 20px;
+}
+
+/* Style the recipe details section within the recipe card */
+.recipe-details {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Style the "View Recipe" button within the recipe card */
+.recipe-view-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Hover effect for the "View Recipe" button */
+.recipe-view-btn:hover {
+    background-color: antiquewhite;
+}
+
+/* Style the heart button within the recipe card */
+.heart-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: lightblue;
+    cursor: pointer;
+    font-size: 24px;
+    color: red;
+    border: none;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+/* Style for the heart button when it is clicked (filled heart) */
+.heart-btn.clicked {
+    color: red;
+}
